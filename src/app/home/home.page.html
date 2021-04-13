@@ -1,4 +1,4 @@
-<ion-header >
+<ion-header class="ion-no-border">
   <ion-toolbar>
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
@@ -17,7 +17,7 @@
 </ion-header>
 
 <ion-content [fullscreen]="true" class="ion-padding">
-  <ion-slides>
+  <ion-slides [options]="slideOptsOne" pager="true" loop="true">
     <ion-slide>
       <div class="slide">
         <img class="ion-padding" src="../../assets/images/slide-1.png"/>
@@ -25,7 +25,37 @@
         <p>The <b>ionic conference app</b> is a practical preview of the ionic framework in action, and a demonstration of proper code use.</p> -->
       </div>
     </ion-slide>
+    <ion-slide>
+      <div class="slide">
+        <img class="ion-padding" src="../../assets/images/slide-1.png"/>
+      </div>
+    </ion-slide>
+    <ion-slide>
+      <div class="slide">
+        <img class="ion-padding" src="../../assets/images/slide-1.png"/>
+      </div>
+    </ion-slide>
+    <ion-slide>
+      <div class="slide">
+        <img class="ion-padding" src="../../assets/images/slide-1.png"/>
+      </div>
+    </ion-slide>
   </ion-slides>
-  
-
+  <!-- <ion-row>
+    <ion-chip>
+      <ion-avatar>
+        <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
+      </ion-avatar>
+      <ion-label>Chip Avatar</ion-label>
+    </ion-chip>
+  </ion-row> -->
+  <ion-row class="ion-margin-top">
+    <ion-item no-lines style="width: 100%;">
+    <ion-scroll scrollX="true" scroll-avatar style="width: 100%;">
+        <ion-avatar>
+          <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y" *ngFor="let avatar of avatars" class="scroll-item"/>
+        </ion-avatar>
+    </ion-scroll>
+    </ion-item>
+  </ion-row>
 </ion-content>
